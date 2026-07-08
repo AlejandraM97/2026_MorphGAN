@@ -4,7 +4,7 @@ Official implementation of:
 
 > **MorphGAN: A Morphology-Driven Anomaly Approach for Pulmonary Nodule Classification in CT**
 <p align="center">
-<img src="Pipeline_Anomaly_Journal.pdf" width="900">
+<img src="Pipeline_Anomaly_Journal.png" width="900">
 </p>
 
 MorphGAN is an anomaly-based framework for pulmonary nodule classification on computed tomography (CT) images. The method is trained using benign pulmonary nodules to learn a reference distribution of benign morphology, texture, and density. Malignant nodules are then identified as out-of-distribution samples according to their reconstruction error and latent-space deviation.
@@ -353,6 +353,17 @@ To reproduce the experiments reported in the paper, keep fixed
 - model configuration
 - loss weights
 - anomaly threshold selection strategy
+
+| Parameter    | Value |
+| ------------ | ----: |
+| Input size   | 32×32 |
+| Batch size   |    16 |
+| Epochs       |   500 |
+| LR           |  2e-4 |
+| Encoder CBAM | False |
+| Decoder CBAM |  True |
+| w_MMD        |    10 |
+
 
 Minor numerical differences may appear depending on the GPU, CUDA and PyTorch versions.
 
