@@ -1,0 +1,25 @@
+model_name: this_is_a_test_delete
+train_type: train
+dataset_version: v3
+folder_path: /home/arumota_pupils/Josue/Datasets/LIDC_Patches-from-December/Processed/4_radiologists_v3
+save_path: /home/arumota_pupils/Josue/2EMBC_Extention/project2.0_mmd/results/weights/
+
+batchsize: 16
+epochs: 5
+w_con: 50
+w_adv: 1
+w_enc: 1
+w_mmd: 0.1
+alpha: 0.8
+seed: 41
+
+con_loss: l2
+
+model_architecture:
+  encoder_cbam: true
+  decoder_cbam: false
+
+secondary_dataset:
+  hist_csv: "/data/Josue/Datasets/LIDC/csv/transformed_hist.csv"
+  npy_dir: "/data/Josue/Datasets/LIDC/1_radiologist"
+  batch_size: 16

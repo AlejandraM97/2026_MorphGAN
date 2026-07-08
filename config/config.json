@@ -1,0 +1,24 @@
+{
+  "seed": 41,
+  "batchsize": 16,
+  "epochs": 500,
+  "con_loss": "l2",
+  "w_adv": 1,
+  "w_enc": 1,
+  "w_con": 50,
+  "w_mmd": 10,
+  "w_latstat": 10,
+  "save_path": "./results/models",
+  "model_name": "decoder_morph_mmd10_malignant2",
+  "csvname": "TEST_CBAM",
+  "folder_path": "/data/Datasets/LIDC_Patches-from-December/Processed/4_radiologists_v3/",
+  "dataset_version": "v9",
+  "train_type": "train",
+  "model_architecture": {
+    "encoder_cbam": false,
+    "decoder_cbam": true
+  },
+  "load_path": "/data/arumota/PhD/Pasantia/project2.0_mmd/results/weights/decoder_morph_mmd10_malignant2.pth",
+
+  "model_type": "morph_malignant"
+}
